@@ -1,6 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Open Sans';
+
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
+
 *
 {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans', Roboto, Montserrat, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-size: medium;
   color: rgb(206, 206, 206);
@@ -98,3 +104,26 @@ form
 footer{
   text-align: center;
 }
+
+
+/* 3 classes left, right, main. Float allows them to reconfigure under 1024px to top middle bottom */
+/*
+.left,
+.right {
+  float: left;
+  width: 20%;
+}
+
+.main {
+  float: left;
+  width: 60%;
+}
+
+@media screen and (max-width:1024px) {
+  .left,
+  .main,
+  .right {
+    width: 100%;
+  }
+}
+*/
