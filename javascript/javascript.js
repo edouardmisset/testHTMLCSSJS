@@ -1,4 +1,4 @@
-// var myNumber = 2;
+/* var myNumber = 2;
 
 // var myText = "mon texte en gras";
 
@@ -150,4 +150,93 @@ function myFunction(array) {
 }
 */
 
+/*
+function myFirstFunction(params) {
+  alert(params)
+}
+
+myFirstFunction("Hello World")
+*/
+
+/*
+function moar(first, second) {
+  // On peut maintenant utiliser les variables "first" et "second" comme on le souhaite :
+  alert('Votre premier argument : ' + first);
+  alert('Votre deuxième argument : ' + second);
+}
+
+moar(
+  prompt('Entrez votre premier argument :'),
+  prompt('Entrez votre deuxième argument :')
+);
+*/
+
+/*
+function prompt2(text, allowedCancel) {
+  if (typeof allowedCancel === 'undefined') {
+    allowedCancel = false;
+  }
+  return text;
+}
+
+prompt2("Hello World")
+*/
+
+/*
+
+function sayHi() {
+  return "Hi!";
+}
+
+alert(sayHi());
+*/
+
+/*
+var helloWorld = function (){
+  alert("Hello World!")
+};
+
+helloWorld();
+*/
+
+
+/*
+// Code externe
+
+(function () {
+
+  // Code isolé
+
+})(); // les parenthèses après la fct servent à l'appeler juste après sa création
+
+// Code externe
+
+*/
+
+/*
+
+var test = 'noir'; // On crée une variable « test » contenant le mot « noir »
+
+(function () { // Début de la zone isolée
+
+  var test = 'blanc'; // On crée une variable du même nom avec le contenu « blanc » dans la zone isolée
+
+  alert('Dans la zone isolée, la couleur est : ' + test);
+
+})(); // Fin de la zone isolée. Les variables créées dans cette zone sont détruites.
+
+alert('Dans la zone non-isolée, la couleur est : ' + test); // Le texte final contient bien le mot « noir » vu que la « zone isolée » n'a aucune influence sur le reste du code
+*/
+
+/*
+
+var calculus = (function(){
+  var result = 0;
+  result += 2;
+  return result;
+})();
+
+alert(calculus);
+
+*/
 
