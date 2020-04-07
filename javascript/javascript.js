@@ -240,3 +240,95 @@ alert(calculus);
 
 */
 
+/*
+var someText = "une Jolie chaine de char...";
+alert(someText.length);
+alert(someText.toUpperCase());
+*/
+
+/*
+var myFirstArray = [1, 2, 3, 4, 5];
+alert(myFirstArray.length); // counts the number of elements in the array
+alert(myFirstArray[3]);
+*/
+
+
+/* 
+// Generates an array of 10 random numbers between 0 and 10
+var myRandomNumbers = []
+
+for (let index = 0; index < 10; index++) {
+  myRandomNumbers.push(Math.round(Math.random() * 10)) // adds an item at the end of the array. 
+};
+
+alert(myRandomNumbers);
+*/
+
+/*
+// Decompose a phrase into an array of words puis l'inverse...
+var unePhrase = 'Voici une phrase dont je ne suis pas peu fier.';
+var motsDeLaPhrase = unePhrase.split(' '); 
+var nouvellePhrase = '';
+alert(motsDeLaPhrase);
+alert(nouvellePhrase = motsDeLaPhrase.join(' '))
+*/
+
+/*
+// Display the content of an array
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+for (let index = 0, c = myArray.length ; index < c ; index++) {
+  alert(myArray[index]);  
+}
+*/
+
+// Building an object / table and listing its elements with for in loop 
+/*
+var routeArray = {
+    name: 'Chimpanzodrome',
+    grde: '7c+',
+    height: '15',
+    holdType: 'mono',
+    stars: '4'
+};
+
+routeArray.profil = 'Overhang';
+
+for (const key in routeArray) {
+  alert(routeArray[key]);
+}
+*/
+
+
+// Fct returns a table / object
+/*
+function getCoords() {
+
+return {
+  x: 12,
+  y: 21
+};
+}
+
+var coords = getCoords();
+
+alert(coords.x); // 12
+alert(coords.y); // 21
+*/
+
+// Ask the user for names, stores them in an array and then displays them all. Also handles errors or empty
+/*
+var nicks = [],
+  nick;
+
+while (nick = prompt('Entrez un prénom :')) {
+  nicks.push(nick);
+}
+
+if (nicks.length > 0) {
+  alert(nicks.join(' ')); // Affiche les prénoms à la suite  
+} else {
+  alert("Missing name");
+}
+*/
+
+
