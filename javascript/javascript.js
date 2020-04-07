@@ -331,4 +331,30 @@ if (nicks.length > 0) {
 }
 */
 
+/*
+// console.log() permet d'afficher la valeur dans la console du navigateur plutôt que dans une boite de dialogue
+for (var i = 0; i < 10; i++) {
+  // On affiche les valeurs de notre boucle dans la console.
+  console.log('La valeur de notre boucle est : ' + i);
+}
+*/
+
+/*
+// création et visualisation d'un objet dans la console
+// On crée un objet basique.
+var helloObject = {
+  english: 'Hello',
+  french: 'Bonjour',
+  spanish: 'Hola'
+};
+
+// Et on l'affiche.
+console.log(helloObject);
+
+// Tant qu'à faire, on affiche aussi un tableau.
+var helloArray = ['Hello', 'Bonjour', 'Hola'];
+
+console.log(helloArray);
+*/
+
 
