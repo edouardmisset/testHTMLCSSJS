@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/master.css">
+  <title>Climbing Performance Logging</title>
+</head>
+
+<body>
+  <h1>Welcome to the Climbing Performance Logging Tool</h1>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="logging.html">Logging</a></li>
+      <li><a href="database.html">Database</a></li>
+      <li><a href="visualisation.html">Visualisation</a></li>
+    </ul>
+  </nav>
+  <form class="form" action="../analysis/formAnalysis.php" method="post">
+    <fieldset>
+      <legend>Most important informations</legend>
+      <div class="MostImportantInformations">
+        <label for="routeName">Route Name</label>
+        <input type="text" name="routeName" id="routeName" placeholder="Name of the Route or Boulder" size="30em"
+          maxlength="50" autofocus required> <br>
+        <label for="topoGrade">Topo Grade (French grades) </label><select class="grade" name="topoGrade">
+          <option value="7a">7a</option>
+          <option value="7b">7b</option>
+          <option value="7c">7c</option>
+          <option value="8a">8a</option>
+          <option value="8b">8b</option>
+        </select> <br>
+        <label for="numberOfTries">Number of Tries: </label><input type="number" name="numberOfTries" id="numberOfTries"
+          max="100" min="1"> <br>
+        <label for="ascentDate">Date</label><input type="date" name="ascentDate" id="ascentDate"
+          placeholder="20/04/2020">
+        <br>
+
+        <label for="routeBoulder">Route / Boulder: </label>
+
+        <input type="radio" name="routeBoulder" id="Route"> <label for="Route">Route</label>
+        <input type="radio" name="routeBoulder" id="Boulder"> <label for="Boulder">Boulder</label>
+
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Less important informations</legend>
+
+      <label for="routeHeight">Route Height (m)</label><input type="number" name="routeHeight" id="routeHeight"
+        placeholder="20m" min="10" max="50" step="5">
+      <br>
+
+      <label for="holdType">Hold Type: </label><br />
+      <input type="radio" name="holdsType" id="crimp" /> <label for="crimp">Crimp</label><br />
+      <input type="radio" name="holdsType" id="pinch" /> <label for="pinch">Pinch</label><br />
+      <input type="radio" name="holdsType" id="jug" /> <label for="jug">Jug</label><br />
+      <input type="radio" name="holdsType" id="crack" /> <label for="crack">Crack</label>
+
+      <br>
+
+
+      <label for="routeProfil">Route Profil: </label><br />
+      <input type="radio" name="routeProfil" id="overhang" /> <label for="crimp">Overhang</label><br />
+      <input type="radio" name="routeProfil" id="vertical" /> <label for="pinch">Vertical</label><br />
+      <input type="radio" name="routeProfil" id="slab" /> <label for="jug">Slab</label><br />
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Least important informations</legend>
+      <label for="comments">Comments</label>
+      <textarea name="comments" id="comments" placeholder="Crux sequence, emotions, belayer, etc" rows="5"
+        cols="60"></textarea>
+    </fieldset>
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" name="reset" value="Reset">
+
+  </form>
+
+</body>
+<footer>
+  Copyright Edouard Misset - All rights reserved
+  <a href="#">Get in Touch</a>
+</footer>
+
+</html>
