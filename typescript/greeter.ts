@@ -21,6 +21,8 @@ let user = { firstName: "Jane", lastName: "User" };
 document.body.textContent = greeter(user);
 */
 
+/*
+
 class Student {
   fullName: string;
   constructor(public firstName: string, public middleInitial: string, public lastName: string) {
@@ -40,3 +42,5 @@ function greeter(person: Person) {
 let user = new Student("Jane", "M.", "User");
 
 document.body.textContent = greeter(user);
+
+*/
