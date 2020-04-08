@@ -381,3 +381,148 @@ for (var i = 0; i < 10; i++) {
   c(i);
 }
 */
+
+// First practical Case 
+// Convert a number to a string
+/*
+
+// Definition tables
+var conversionTableUnit = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+
+var conversionTableTen = ["ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+var conversionTableExeptions = ["eleven", "twelve","thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+
+// Définition of our variables to build our strings
+var stringConstructionHundreds = "";
+var stringConstructionTens = "";
+var stringConstructionUnits = "";
+
+// User input to be passed to function
+var numberToConvert = parseInt(prompt("Choose a number between 0 and 999", "115"),10);
+
+// This function splits the number into 3 parts : hundreds, tens and units
+function convertNumberToString(aNumber) {
+
+  var numberOfHundreds = Math.floor(aNumber / 100);
+  var numberOfTens = Math.floor((aNumber % 100) / 10);
+  var numberOfUnits = aNumber % 10;
+
+  // log it in the console
+  // console.log(numberOfHundreds);
+  // console.log(numberOfTens);
+  // console.log(numberOfUnits);
+
+  // construction of the hundreds string only if not 0
+  if (numberOfHundreds) {
+    stringConstructionHundreds = conversionTableUnit[numberOfHundreds - 1] + " hundreds and "
+  }
+
+  // Construction of the units string only if not 0
+  if (numberOfUnits) { 
+    stringConstructionUnits = conversionTableUnit[numberOfUnits - 1]
+  }
+
+  // Construction of the tens string
+  switch (numberOfTens) {
+    case 0: // no string if no tens
+      stringConstructionTens = ""; 
+      break;
+    case 1: // to deal with the 'teen
+      stringConstructionTens = conversionTableExeptions[numberOfUnits - 1]; 
+      stringConstructionUnits = ""; // remember to erase the unit string in this special case
+      break;
+    default: // normal case 20, 30, 40...
+      stringConstructionTens = conversionTableTen[numberOfTens - 1] + " "
+      break;
+  }
+
+  // At the end of the function return an alert to the user to express the result
+  alert("Your number is " + stringConstructionHundreds + stringConstructionTens + stringConstructionUnits);
+}
+
+convertNumberToString(numberToConvert);
+*/
+
+
+// La version équivalente en français
+/*
+function num2Letters(number) {
+
+    if (isNaN(number) || number < 0 || 999 < number) {
+        return 'Veuillez entrer un nombre entier compris entre 0 et 999.';
+    }
+
+    var units2Letters = ['', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'],
+        tens2Letters = ['', 'dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'soixante', 'quatre-vingt', 'quatre-vingt'];
+
+    var units = number % 10,
+        tens = (number % 100 - units) / 10,
+        hundreds = (number % 1000 - number % 100) / 100;
+
+    var unitsOut, tensOut, hundredsOut;
+
+
+    if (number === 0) {
+
+        return 'zéro';
+
+    } else {
+
+        // Traitement des unités
+
+        unitsOut = (units === 1 && tens > 0 && tens !== 8 ? 'et-' : '') + units2Letters[units];
+
+        // Traitement des dizaines
+
+        if (tens === 1 && units > 0) {
+
+            tensOut = units2Letters[10 + units];
+            unitsOut = '';
+
+        } else if (tens === 7 || tens === 9) {
+
+            tensOut = tens2Letters[tens] + '-' + (tens === 7 && units === 1 ? 'et-' : '') + units2Letters[10 + units];
+            unitsOut = '';
+
+        } else {
+
+            tensOut = tens2Letters[tens];
+
+        }
+
+        tensOut += (units === 0 && tens === 8 ? 's' : '');
+
+        // Traitement des centaines
+
+        hundredsOut = (hundreds > 1 ? units2Letters[hundreds] + '-' : '') + (hundreds > 0 ? 'cent' : '') + (hundreds > 1 && tens == 0 && units == 0 ? 's' : '');
+
+        // Retour du total
+
+        return hundredsOut + (hundredsOut && tensOut ? '-' : '') + tensOut + (hundredsOut && unitsOut || tensOut && unitsOut ? '-' : '') + unitsOut;
+    }
+
+}
+
+
+
+var userEntry;
+
+while (userEntry = prompt('Indiquez le nombre à écrire en toutes lettres (entre 0 et 999) :')) {
+
+    alert(num2Letters(parseInt(userEntry, 10)));
+
+}
+*/
+
+
+/*
+// A simple function to build an array of int from lowerBond to higherBond
+function buildingArray(lowerBond, higherBond) {
+  var myArray = [lowerBond];
+  for (let index = 0; index < higherBond; index++) {
+    myArray.push(index);
+  }
+  return myArray;
+}
+*/
