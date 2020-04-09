@@ -1,5 +1,3 @@
-/* var myNumber = 2;
-
 // var myText = "mon texte en gras";
 
 // var myBoolean = false;
@@ -526,3 +524,137 @@ function buildingArray(lowerBond, higherBond) {
   return myArray;
 }
 */
+
+/*
+// Va créer une table de tous les éléments div du document et les affiche ds une alert
+var divs = document.getElementsByTagName('div');
+
+for (var i = 0, c = divs.length; i < c; i++) {
+  alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
+}
+*/
+
+/*
+// Va chercher les éléments menu / item / span et affiche le contenu grace à ".innerHTML"
+var query = document.querySelector('#menu .item span'),
+  queryAll = document.querySelectorAll('#menu .item span');
+
+alert(query.innerHTML); // Affiche : "Élément 1"
+
+alert(queryAll.length); // Affiche : "2"
+alert(queryAll[0].innerHTML + ' - ' + queryAll[1].innerHTML); // Affiche : "Élément 1 - Élément 2"
+*/
+/*
+// Collection of spans & display length of the 2nd
+var spans = document.querySelectorAll("span");
+alert(spans[1].innerHTML.length);
+*/
+
+/*
+// First model of an ascent
+var ascent = {
+  "name":"Chimpanzodrome", // Mandatory
+  "topoGrade": "7c+", // Mandatory
+  "myGrade": "7c",
+  "gradeSystem":"French",
+  "tries": "10", // Mandatory
+  "ascentDate": "08/04/2020", // Mandatory
+  "routeBoulder": "route", // Mandatory
+  "height":"15",
+  "heightUnit":"m",
+  "holdType":"Mono",
+  "Profil":"Overhang",
+  "crag":"Le Saussois",
+  "area":"Chimpanzodrome",
+  "cragLattitude":"0",
+  "lattitudeUnit":"degrees",
+  "cragLongitude":"45",
+  "longitudeUnit": "degrees",
+  "comments":"blablabla"
+}
+*/
+
+/*
+var link = document.getElementById("myLink");
+var href = link.getAttribute("href");
+
+alert(href);
+
+link.setAttribute('href', 'http://www.siteduzero.com');
+*/
+
+// Not working on logging.html
+/*
+var smg = document.getElementById('ascentDate').getAttribute('placeholder');
+alert(smg);
+*/
+
+/*
+// gets the target id en then sets its CSS class property to blue
+document.getElementById('myColoredDiv').className = 'blue';
+*/
+
+/*
+// Fetches the class of the element and transforms it into an array
+classes = document.getElementById('myLink').className;
+stringClasses = classes.split(' ');
+alert(stringClasses[2]);
+*/
+
+/*
+var div = document.querySelector('div');
+
+div.classList.add('Newbie');
+div.classList.add('oldies');
+div.classList.remove("Newbie");
+div.classList.toggle('Newbie');
+console.log(div.classList[0]);
+
+*/
+
+
+/*
+// Quelques manipulations de class de div : classList, add remove, contains, toggle
+var div = document.querySelector('div');
+
+// Ajoute une nouvelle classe
+div.classList.add('new-class');
+
+// Retire une classe
+div.classList.remove('new-class');
+
+// Retire une classe si elle est présente ou bien l'ajoute si elle est absente
+div.classList.toggle('toggled-class');
+
+// Indique si une classe est présente ou non
+if (div.classList.contains('old-class')) {
+  alert('La classe .old-class est présente !');
+}
+
+// Parcourt et affiche les classes CSS
+var result = '';
+
+for (var i = 0; i < div.classList.length; i++) {
+  result += '.' + div.classList[i] + '\n';
+}
+
+alert(result);
+*/
+
+/*
+var div = document.getElementById('myDiv');
+
+alert(div.innerHTML); // returns plain text
+*/
+
+/*
+// Manipulation d'ajout / remplacement d'html via JS
+document.getElementById('myDiv').innerHTML = '<blockquote>Je mets une citation à la place du paragraphe</blockquote>';
+
+for (let index = 0; index < 10; index++) {
+
+document.getElementById('myDiv').innerHTML += ' et <strong>une portion mise en emphase</strong>.';
+}
+*/ 
+
+// document.getElementById('myDiv').innerHTML += '<p>et un autre <a>lien</a>.</p>' 
