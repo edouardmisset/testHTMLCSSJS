@@ -15,53 +15,84 @@
 
 <body>
 
-  <header id="top" class="jumbotron text-center">
+  <header id="top" class="">
 
-    <div class="container"><p class="display-4">Climbing Performance Analysis Tool</p>
-    <small class="text-muted">Log, Analyse, Train and Crush!</small>
+    <!-- Naivgation bar -->
+    <div class="container">
+      <nav class="navbar-text fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+        <!-- Brand name / logo link
+                <a class="navbar-brand" href="#">CPAT</a> -->
+
+        <!-- Adding a button to toggle the nav menu when the interface is too small-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- List des onglets-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="index.html"><i class="fa fa-cloud"></i>Home <span
+                class="sr-only">(current)</span></a>
+
+            <a class="nav-item nav-link" href="content/logging.html"><i class="fa fa-car"></i>
+              Logging <span class="sr-only">(current)</span></a>
+
+            <a class="nav-item nav-link" href="content/database.html"><i class="fa fa-heart"></i>
+              Database <span class="sr-only">(current)</span></a>
+
+            <a class="nav-item nav-link" href="content/visualisation.html"><i class="fa fa-bars"></i>
+              Visualisation <span class="sr-only">(current)</span></a>
+
+            <a class="nav-item nav-link" href="test.html"><i class="fa fa-file"></i>
+              TEST <span class="sr-only">(current)</span></a>
+
+            <a class="nav-item nav-link disabled" href="bootstrapExample.html">
+              Bootstrap Example <span class="sr-only">(current)</span></a>
+          </div>
+
+          <!-- Adding a search box to the right of the nav bar-->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+
+        </div>
+
+
+      </nav>
     </div>
 
-      <div class="container">
-        <nav class="container">
-          <ul class="container">
-            <li>
-              <a href="index.html"><i class="fa fa-cloud"></i> 
-                Home</a></li>
-            <li>
-              <a href="content/logging.html"><i class="fa fa-car"></i> 
-              Logging</a></li>
-            <li>
-              <a href="content/database.html"><i class="fa fa-heart"></i> 
-              Database</a></li>
-            <li>
-              <a href="content/visualisation.html"><i class="fa fa-bars"></i> 
-              Visualisation</a></li>
-            <li>
-              <a href="test.html"><i class="fa fa-file"></i> 
-              TEST</a></li>
-            <li>
-              <a href="bootstrapExample.html">
-              Bootstrap Example</a></li>
-          </ul>
-        </nav>
+  <div class="jumbotron jumbotron-fluid">
+      <!-- Website Title & Subtitle-->
+      <div class="container text-center">
+        <div class="h1">Climbing Performance Analysis Tool</div>
+        <small class="h2 text-muted">Log, Analyse, Train and Crush!</small>
       </div>
-      <backquote class="backquote">There's no such thing as too much <strong>Power!</strong> - <mark>Wolfgang Güllich</mark></backquote>
+  
+      <!-- Master quote -->
+      <div class="container text-left  mb-sm-n5">
+        <backquote class="backquote">There's no such thing as too much <strong>Power!</strong>
+          <footer class="backquote-footer"> - Wolfgang Güllich</footer>
+        </backquote>
+      </div>
+
+    </div>
   </header>
-  <!-- <h2>User</h2> -->
-
-
 
   <div class="container text-justify">
     <div class="row p-1">
       <article class="container col-md-7">
         <div class="row ">
           <h2>Welcome to the land of Sends and data analysis</h2>
-          <p >
+          <p>
             Here you can use all you previous performances in order to tailor you training planning, inform decisions
             about your next trip or just show off to your friends. <br>
             The main tab you'll be interested in is the Dashboard.</p>
         </div>
-  
+
         <div class="row">
           <h2 class="">The Dashboard:</h2>
           <p>
@@ -70,23 +101,23 @@
             On this tab you can edit the filters of the second row (Climber, Grade, Crag, etc.)
           </p>
         </div>
-  
+
         <div class="row">
           <h2 class="">Try these:</h2>
-  
+
           <p>
             "What's my hardest send on slab?" <br>
             ➜ Filter the climber on your name, choose the slab Profil and Route (from Route / Boulder). <br>
             Paow! Looking at the Pyramid you'll see 7b. It's magic!
           </p>
-  
+
           <p>
             "What's my average number of tries on 7c?" <br>
             ➜ Filter the climber on your name, choose route (or boulder). <br>
             WAM! Looking at the graph # Tries per grade
             you'll see 3 tries. Nice job!
           </p>
-  
+
           <p>
             "I want to training effciently. What type of boulders do I climb most?" <br>
             ➜ Filter the climber on your name, choose boulder. <br>
@@ -94,7 +125,7 @@
             train
             these!
           </p>
-  
+
           <p>
             "I feel like I'm stagnating. Is that true?" <br>
             ➜ Filter the climber on your name. Take a look at the volume of ascents (Route/Boulder per Season) from one
@@ -103,9 +134,10 @@
           </p>
         </div>
       </article>
-  
+
       <div class="container col-md-4">
-        <aside class="row pt-4"> <!-- remove style => do the same with a bootstrap class-->
+        <aside class="row pt-4">
+          <!-- remove style => do the same with a bootstrap class-->
           <h2>Please Note:</h2>
           <p>All tabs are locked in order to prevent tragic mistakes. 😅 <br>
             Multiple users can log in at the same time and change the filters. <br>
