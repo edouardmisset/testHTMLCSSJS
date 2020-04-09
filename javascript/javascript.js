@@ -283,7 +283,7 @@ for (let index = 0, c = myArray.length ; index < c ; index++) {
 /*
 var routeArray = {
     name: 'Chimpanzodrome',
-    grde: '7c+',
+    grade: '7c+',
     height: '15',
     holdType: 'mono',
     stars: '4'
@@ -516,10 +516,13 @@ while (userEntry = prompt('Indiquez le nombre à écrire en toutes lettres (entr
 
 /*
 // A simple function to build an array of int from lowerBond to higherBond
-function buildingArray(lowerBond, higherBond) {
+function buildingArray(lowerBond, higherBond, step) {
   var myArray = [lowerBond];
+  var myStep = 1;
+  myStep = step;
+
   for (let index = 0; index < higherBond; index++) {
-    myArray.push(index);
+    myArray.push(index * myStep);
   }
   return myArray;
 }
@@ -655,6 +658,67 @@ for (let index = 0; index < 10; index++) {
 
 document.getElementById('myDiv').innerHTML += ' et <strong>une portion mise en emphase</strong>.';
 }
-*/ 
+*/
 
 // document.getElementById('myDiv').innerHTML += '<p>et un autre <a>lien</a>.</p>' 
+
+
+/*
+
+// an array of french grades
+var someFrGrades = ["7a", "7b", "8a", "9a", "6c", "8b", "7b"];
+
+// The table of conversion between french grade and numerical grade
+const conversionTableFrGradeToNumGrade = {
+  '4a': "1",
+  '4b': "2",
+  '4c': "3",
+  '5a': "4",
+  '5b': "5",
+  '5c': "6",
+  '6a': "7",
+  '6a+': "8",
+  "6b": "9",
+  "6b+": "10",
+  "6c": "11",
+  "6c+": "12",
+  "7a": "13",
+  "7a+": "14",
+  "7b": "15",
+  "7b+": "16",
+  "7c": "17",
+  "7c+": "18",
+  "8a": "19",
+  "8a+": "20",
+  "8b": "21",
+  "8b+": "22",
+  "8c": "23",
+  "8c+": "24",
+  "9a": "25"
+  "9a+": "26"
+  "9b": "27"
+  "9b+": "28"
+  "9c": "29"
+};
+
+// The fonction which converts one or multiple french grades to numerical grades
+function convertFrGradeToNumGrades(anArrayOfFrGrades) {
+  var convertedNumGrades;
+// tests if it's only one grade "7a" which is a string
+  if (typeof anArrayOfFrGrades === "string") { // Conversion if only one grade passed as a string
+    convertedNumGrades = conversionTableFrGradeToNumGrade[anArrayOfFrGrades];
+  } else if (typeof anArrayOfFrGrades === "object") { // Converstion if an array (of fr grade is passed)
+    convertedNumGrades = []; // needs to set the variable to an array
+    for (let index = 0; index < anArrayOfFrGrades.length; index++) { // goes trough each element of the passed array
+      convertedNumGrades.push(conversionTableFrGradeToNumGrade[anArrayOfFrGrades[index]]);
+    }
+  }
+    console.log('typeof convertedNumGrades :', typeof convertedNumGrades, convertedNumGrades);
+
+  return convertedNumGrades; // returns either resut : a string if it's a single grade or an object of numbers 
+
+};
+
+alert(convertFrGradeToNumGrades(someFrGrades)); // shows the result for some french grades
+
+*/
