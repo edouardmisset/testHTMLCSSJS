@@ -722,3 +722,52 @@ function convertFrGradeToNumGrades(anArrayOfFrGrades) {
 alert(convertFrGradeToNumGrades(someFrGrades)); // shows the result for some french grades
 
 */
+
+/*
+// Selection de noeud par id puis navigation au parent avec .parentNode
+var paragraph = document.getElementById("myP");
+
+var blockquote = paragraph.parentNode;
+
+var paragraph = document.getElementById('myP');
+alert(paragraph.nodeType + '\n\n' + paragraph.nodeName.toLocaleLowerCase());
+*/
+
+/*
+// Un peu de manimuplation de DOM
+var monPremierEnfant = document.getElementById("myP").firstChild;
+
+var monDernierEnfant = document.getElementById("myP").lastChild.textContent.toUpperCase();
+
+console.log('monPremierEnfant :', monPremierEnfant);
+console.log('monDernierEnfant :', monDernierEnfant);
+*/
+
+
+// Some more manipulation : lastChild & firstChild & nodeValue and data both return the values inside the node
+
+/*
+var paragraph = document.getElementById("myP");
+var first = paragraph.firstChild;
+var last = paragraph.lastChild;
+
+console.log(first.nodeValue);
+console.log(last.firstChild.data);
+*/
+
+/*
+// ChildNode renvoie un tableau des enfant du noeud. On le parcourt pour en extraire les info de texte.
+var paragraph = document.getElementById("myP");
+var enfants = paragraph.childNodes;
+
+for (let index = 0; index < enfants.length; index++) {
+
+  if (enfants[index].nodeType === Node.ELEMENT_NODE) {
+    console.log(enfants[index], enfants[index].firstChild.data);
+  } else {
+    console.log(enfants[index].data);
+  }
+}
+*/
+
+
