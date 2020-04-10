@@ -553,29 +553,7 @@ var spans = document.querySelectorAll("span");
 alert(spans[1].innerHTML.length);
 */
 
-/*
-// First model of an ascent
-var ascent = {
-  "name":"Chimpanzodrome", // Mandatory
-  "topoGrade": "7c+", // Mandatory
-  "myGrade": "7c",
-  "gradeSystem":"French",
-  "tries": "10", // Mandatory
-  "ascentDate": "08/04/2020", // Mandatory
-  "routeBoulder": "route", // Mandatory
-  "height":"15",
-  "heightUnit":"m",
-  "holdType":"Mono",
-  "Profil":"Overhang",
-  "crag":"Le Saussois",
-  "area":"Chimpanzodrome",
-  "cragLattitude":"0",
-  "lattitudeUnit":"degrees",
-  "cragLongitude":"45",
-  "longitudeUnit": "degrees",
-  "comments":"blablabla"
-}
-*/
+
 
 /*
 var link = document.getElementById("myLink");
@@ -663,8 +641,8 @@ document.getElementById('myDiv').innerHTML += ' et <strong>une portion mise en e
 // document.getElementById('myDiv').innerHTML += '<p>et un autre <a>lien</a>.</p>' 
 
 
-/*
 
+/*
 // an array of french grades
 var someFrGrades = ["7a", "7b", "8a", "9a", "6c", "8b", "7b"];
 
@@ -694,10 +672,10 @@ const conversionTableFrGradeToNumGrade = {
   "8b+": "22",
   "8c": "23",
   "8c+": "24",
-  "9a": "25"
-  "9a+": "26"
-  "9b": "27"
-  "9b+": "28"
+  "9a": "25",
+  "9a+": "26",
+  "9b": "27",
+  "9b+": "28",
   "9c": "29"
 };
 
@@ -720,8 +698,8 @@ function convertFrGradeToNumGrades(anArrayOfFrGrades) {
 };
 
 alert(convertFrGradeToNumGrades(someFrGrades)); // shows the result for some french grades
-
 */
+
 
 /*
 // Selection de noeud par id puis navigation au parent avec .parentNode
@@ -770,4 +748,41 @@ for (let index = 0; index < enfants.length; index++) {
 }
 */
 
+
+ // First model of an ascent
+ var ascent = {
+   "name": "Chimpanzodrome", // Mandatory
+   "topoGrade": "7c+", // Mandatory
+   "myGrade": "7c",
+   "gradeSystem": "French",
+   "tries": "10", // Mandatory
+   "ascentDate": "08/04/2020", // Mandatory
+   "routeBoulder": "route", // Mandatory
+   "height": "15",
+   "heightUnit": "m",
+   "holdType": "Mono",
+   "Profil": "Overhang",
+   "crag": "Le Saussois",
+   "area": "Chimpanzodrome",
+   "cragLattitude": "0",
+   "lattitudeUnit": "degrees",
+   "cragLongitude": "45",
+   "longitudeUnit": "degrees",
+   "comments": "blablabla"
+ }
+
+ /*
+
+function submitForm() {
+
+// console.log('ascentFormId :', document.getElementById(AscentFormId).submit());
+
+  ascent["name"] = document.getElementById("routeName").value;
+  // ascent["routeBoulder"] = document.getElementById("routeBoulder").value;
+  console.log(ascent["name"]);
+  console.log(ascent);
+
+  return 1;
+}
+*/
 
