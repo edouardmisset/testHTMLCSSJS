@@ -801,39 +801,48 @@ var northAmerica = [6, 3, 2, 2, 7, 26, 82, 172, 312, 433];
 
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: years,
-    datasets: [{
-        data: africa,
-        label: 'Africa',
-        borderColor: "#3e95cd",
-        fill: false,
-      },
-      {
-        data: asia,
-        label: "Asia",
-        borderColor: "#8e5ea2",
-        fill: false
-      }, {
-        data: europe,
-        label: "Europe",
-        borderColor: "#3cba9f",
-        fill: false
-      }, {
-        data: latinAmerica,
-        label: "Latin America",
-        borderColor: "#e8c3b9",
-        fill: false
-      }, {
-        data: northAmerica,
-        label: "North America",
-        borderColor: "#c45850",
-        fill: false
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [{
+          data: africa,
+          label: 'Africa',
+          // borderColor: "#3e95cd",
+          fill: false,
+        },
+        {
+          data: asia,
+          label: "Asia",
+          // borderColor: "#8e5ea2",
+          fill: false
+        }, {
+          data: europe,
+          label: "Europe",
+          // borderColor: "#3cba9f",
+          fill: false
+        }, {
+          data: latinAmerica,
+          label: "Latin America",
+          // borderColor: "#e8c3b9",
+          fill: false
+        }, {
+          data: northAmerica,
+          label: "North America",
+          // borderColor: "#c45850",
+          fill: false
+        }
+      ]
+    },
+    options: {
+      plugins: {
+        colorschemes: {
+          scheme: 'brewer.Paired12'
+        }
       }
-    ]
+    }
   }
-});
+
+);
 
 var numberOfRoutesPerGrades = [52, 28, 24, 15, 11, 6, 8, 2];
 
@@ -852,37 +861,65 @@ var myChart2 = new Chart(ctx2, {
     datasets: [{
       data: numberOfRoutesPerGrades,
       label: 'Ascents',
-      backgroundColor: 'RGB(147, 196, 125)',
+      // backgroundColor: 'RGB(147, 196, 125)',
     }]
   },
   options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            // min: 0,
-            // stepSize: 1,
-            fontColor: "white",
-            // fontSize: 14
-          },
-          // gridLines: {
-          //   display:true,
-          //   color: "#white",
-          //   // lineWidth: 2,
-          //   zeroLineColor: "#white",
-          //   // zeroLineWidth: 2
-          // },
-          // stacked: true
-        }],
-        xAxes: [{
-          ticks: {
-            fontColor: "white",
-            // fontSize: 14
-          },
-          // gridLines: {
-          //   display:true,
-          //   color: "transparent",
-          //   // lineWidth: 2
-          // }
-        }]
-      }}
+    scales: {
+      yAxes: [{
+        ticks: {
+          // min: 0,
+          // stepSize: 1,
+          fontColor: "white",
+          // fontSize: 14
+        },
+        // gridLines: {
+        //   display:true,
+        //   color: "#white",
+        //   // lineWidth: 2,
+        //   zeroLineColor: "#white",
+        //   // zeroLineWidth: 2
+        // },
+        // stacked: true
+      }],
+      xAxes: [{
+        ticks: {
+          fontColor: "white",
+          // fontSize: 14
+        },
+        // gridLines: {
+        //   display:true,
+        //   color: "transparent",
+        //   // lineWidth: 2
+        // }
+      }]
+    },
+    title: {
+      display: true,
+      fontColor: 'white',
+      text: 'Ascents by grade',
+    },
+    legend: {
+      labels: {
+        fontColor: 'white',
+      },
+      position: 'right',
+    },
+    plugins: {
+      // Change options for ALL labels of THIS CHART
+      datalabels: {
+        color: 'white',
+        anchor: 'end',
+        clamp: 'true',
+        align: 'top',
+        font: {
+          weight: 'bold',
+        }
+      },
+      colorschemes: {
+        scheme: 'brewer.YlGn3'
+      }
+    }
+
+  }
 });
