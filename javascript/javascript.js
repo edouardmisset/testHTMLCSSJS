@@ -749,29 +749,29 @@ for (let index = 0; index < enfants.length; index++) {
 */
 
 
- // First model of an ascent
- var ascent = {
-   "name": "Chimpanzodrome", // Mandatory
-   "topoGrade": "7c+", // Mandatory
-   "myGrade": "7c",
-   "gradeSystem": "French",
-   "tries": "10", // Mandatory
-   "ascentDate": "08/04/2020", // Mandatory
-   "routeBoulder": "route", // Mandatory
-   "height": "15",
-   "heightUnit": "m",
-   "holdType": "Mono",
-   "Profil": "Overhang",
-   "crag": "Le Saussois",
-   "area": "Chimpanzodrome",
-   "cragLattitude": "0",
-   "lattitudeUnit": "degrees",
-   "cragLongitude": "45",
-   "longitudeUnit": "degrees",
-   "comments": "blablabla"
- }
+// First model of an ascent
+var ascent = {
+  "name": "Chimpanzodrome", // Mandatory
+  "topoGrade": "7c+", // Mandatory
+  "myGrade": "7c",
+  "gradeSystem": "French",
+  "tries": "10", // Mandatory
+  "ascentDate": "08/04/2020", // Mandatory
+  "routeBoulder": "route", // Mandatory
+  "height": "15",
+  "heightUnit": "m",
+  "holdType": "Mono",
+  "Profil": "Overhang",
+  "crag": "Le Saussois",
+  "area": "Chimpanzodrome",
+  "cragLattitude": "0",
+  "lattitudeUnit": "degrees",
+  "cragLongitude": "45",
+  "longitudeUnit": "degrees",
+  "comments": "blablabla"
+}
 
- /*
+/*
 
 function submitForm() {
 
@@ -805,32 +805,84 @@ var myChart = new Chart(ctx, {
   data: {
     labels: years,
     datasets: [{
-      data: africa,
-      label:'Africa',
-      borderColor: "#3e95cd",
-      fill: false,
-    },
-    {
-      data: asia,
-      label: "Asia",
-      borderColor: "#8e5ea2",
-      fill: false
-    }, {
-      data: europe,
-      label: "Europe",
-      borderColor: "#3cba9f",
-      fill: false
-    }, {
-      data: latinAmerica,
-      label: "Latin America",
-      borderColor: "#e8c3b9",
-      fill: false
-    }, {
-      data: northAmerica,
-      label: "North America",
-      borderColor: "#c45850",
-      fill: false
-    }
-  ]
-    }
+        data: africa,
+        label: 'Africa',
+        borderColor: "#3e95cd",
+        fill: false,
+      },
+      {
+        data: asia,
+        label: "Asia",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, {
+        data: europe,
+        label: "Europe",
+        borderColor: "#3cba9f",
+        fill: false
+      }, {
+        data: latinAmerica,
+        label: "Latin America",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, {
+        data: northAmerica,
+        label: "North America",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  }
+});
+
+var numberOfRoutesPerGrades = [52, 28, 24, 15, 11, 6, 8, 2];
+
+var grades = ["7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+"];
+
+var xAxisGrades = {
+  type: 'category',
+  labels: ["7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+"]
+}
+
+var ctx2 = document.getElementById("myChart2");
+var myChart2 = new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: grades,
+    datasets: [{
+      data: numberOfRoutesPerGrades,
+      label: 'Ascents',
+      backgroundColor: 'RGB(147, 196, 125)',
+    }]
+  },
+  options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            // min: 0,
+            // stepSize: 1,
+            fontColor: "white",
+            // fontSize: 14
+          },
+          // gridLines: {
+          //   display:true,
+          //   color: "#white",
+          //   // lineWidth: 2,
+          //   zeroLineColor: "#white",
+          //   // zeroLineWidth: 2
+          // },
+          // stacked: true
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
+            // fontSize: 14
+          },
+          // gridLines: {
+          //   display:true,
+          //   color: "transparent",
+          //   // lineWidth: 2
+          // }
+        }]
+      }}
 });
