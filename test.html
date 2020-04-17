@@ -26,8 +26,8 @@
 <body>
 
   <canvas id="myChart" width="100" height="50"></canvas>
-  
-  <canvas id="myChart2" width="100" height="50" style="background: rgb(102, 102, 102)" ></canvas>
+
+  <canvas id="myChart2" width="100" height="50" style="background: rgb(102, 102, 102)"></canvas>
 
 
 
@@ -78,7 +78,8 @@
 
 
 
-  <form name="ascentForm" id="AscentFormId" action="/action_page.php" onsubmit="return submitForm()" class="was-validated" method="POST">
+  <form name="ascentForm" id="AscentFormId" action="/action_page.php" onsubmit="return submitForm()"
+    class="was-validated" method="POST">
 
     <div class="form-group">
       <label for="routeName">Route Name: </label>
@@ -111,19 +112,98 @@
       <input class="form-control" type="number" name="numberOfTries" id="numberOfTries" placeholder="1" required>
     </div>
 
-    <button class="btn btn-primary" type="submit" value ="submit" onmousedown="submitForm()">Submit</button>
-
+    <button class="btn btn-primary" type="submit" value="submit" onmousedown="submitForm()">Submit</button>
   </form>
 
+  <!-- <button class="btn btn-primary" onclick="alert('Voici le contenu de l\'élément que vous avez cliqué :\n\n' + this.innerHTML);">Cliquez-moi !</button>
+
+  <input id="input" type="text" size="50" placeholder="Cliquez ici !"
+    onfocus="this.placeholder='Appuyez maintenant sur votre touche de tabulation.';"
+    onblur="this.placeholder='Cliquez ici !';" />
+  <br /><br />
+  <a href="#"
+    onfocus="document.getElementById('input').placeholder = 'Vous avez maintenant le focus sur le lien, bravo !';">Un
+    lien bidon</a> -->
+
+  <!-- Ajouter (et supprimer) des évenements avec addElementListener et removeEventListener -->
+  <!-- <button class="btn btn-primary" id="clickme">Cliquez-moi !</button>
+
+  <script>
+    var element = document.getElementById('clickme');
+
+    // Premier événement click
+    element.addEventListener('click', function () {
+      alert("Et de un !");
+    });
+
+    // Deuxième événement click
+    element.addEventListener('click', function () {
+      alert("Et de deux !");
+    });
+  </script> -->
+
+<!-- Phase de capture et de bouillenement (descendante et ascendante) -->
+<!-- <div id="capt1">
+  <span id="capt2">Cliquez-moi pour la phase de capture.</span>
+</div>
+
+<div id="boul1">
+  <span id="boul2">Cliquez-moi pour la phase de bouillonnement.</span>
+</div>
+
+<script>
+  var capt1 = document.getElementById('capt1'),
+    capt2 = document.getElementById('capt2'),
+    boul1 = document.getElementById('boul1'),
+    boul2 = document.getElementById('boul2');
+
+  capt1.addEventListener('click', function () {
+    alert("L'événement du div vient de se déclencher.");
+  }, true);
+
+  capt2.addEventListener('click', function () {
+    alert("L'événement du span vient de se déclencher.");
+  }, true);
+
+  boul1.addEventListener('click', function () {
+    alert("L'événement du div vient de se déclencher.");
+  }, false);
+
+  boul2.addEventListener('click', function () {
+    alert("L'événement du span vient de se déclencher.");
+  }, false);
+</script> -->
 
 
 
+<!-- Event and target (source of the event) -->
+<!-- <p id="result"></p>
 
+<div id="parent1">
+  Parent
+  <div id="child1">Enfant N°1</div>
+  <div id="child2">Enfant N°2</div>
+</div>
 
+<script>
+  var parent1 = document.getElementById('parent1'),
+    result = document.getElementById('result');
 
+  parent1.addEventListener('mouseover', function (e) {
+    result.innerHTML = "L'élément déclencheur de l'événement \"mouseover\" possède l'ID : " + e.currentTarget.id;
+  });
+</script> -->
 
+<!-- Retourn le x et y du curseur avec l'event mousemove -->
+<!-- <div id='position'></div>
 
-
+<script>
+  var position = document.getElementById('position');
+  
+  document.addEventListener('mousemove', function(e) {
+    position.innerHTML = "La position du curseur est : x = " + e.clientX + " et y = " + e.clientY ;
+  })
+</script> -->
 
 
   <script src="javascript/javascript.js"></script>
