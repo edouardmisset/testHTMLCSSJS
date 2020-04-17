@@ -642,10 +642,11 @@ document.getElementById('myDiv').innerHTML += ' et <strong>une portion mise en e
 
 
 
-/*
-// an array of french grades
-var someFrGrades = ["7a", "7b", "8a", "9a", "6c", "8b", "7b"];
 
+// an array of french grades
+var someFrGrades = ["7a", "7b", "8a", "9a", "6c", "8b", "7b", '7a', '7b', '7c', '7a', '7a', '7b', '7b'];
+
+/*
 // The table of conversion between french grade and numerical grade
 const conversionTableFrGradeToNumGrade = {
   '4a': "1",
@@ -788,6 +789,8 @@ function submitForm() {
 
 
 
+/*
+
 // World Population source Wiki
 
 // Our labels along the x-axis
@@ -843,7 +846,7 @@ var myChart = new Chart(ctx, {
   }
 
 );
-
+*/
 var numberOfRoutesPerGrades = [52, 28, 24, 15, 11, 6, 8, 2];
 
 var grades = ["7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+"];
@@ -923,3 +926,151 @@ var myChart2 = new Chart(ctx2, {
 
   }
 });
+
+
+// */
+
+
+/*
+// Création d'un élément 
+var newLink = document.createElement('a'); 
+// Attributs de l'élément
+newLink.id = 'sdz_link';
+newLink.href = 'http://www.siteduzero.com';
+newLink.title = 'Découvrez le Site du Zéro !';
+newLink.setAttribute('tabindex', '10');
+// Son insersion
+document.getElementById('myP').appendChild(newLink);
+
+var newLinkText  = document.createTextNode('Le site du zero');
+
+newLink.appendChild(newLinkText);
+// ^ déprécié
+*/
+
+
+/*
+// Favoriser cette method 
+var newLink = document.createElement('a');
+var newLinkText = document.createTextNode("Le Site du Zéro");
+
+newLink.id = 'sdz_link';
+newLink.href = 'http://www.siteduzero.com';
+newLink.title = 'Découvrez le Site du Zéro !';
+newLink.setAttribute('tabindex', '10');
+
+newLink.appendChild(newLinkText);
+
+document.getElementById('myP').appendChild(newLink);
+
+*/
+
+/*
+// On récupère, via son ID, l'élément fraîchement inséré
+var sdzLink = document.getElementById('sdz_link');
+
+sdzLink.href = 'http://www.siteduzero.com/forum.html';
+
+// newLink.href affiche bien la nouvelle URL :
+// alert(newLink.href);
+
+var link = document.querySelector('a');
+var newLabel = document.createTextNode('et un hyperlien');
+
+link.replaceChild(newLabel, link.firstChild);
+
+// On va cloner un élément créé :
+var hr1 = document.createElement('hr');
+var hr2 = hr1.cloneNode(false); // Il n'a pas d'enfants…
+
+// Ici, on clone un élément existant :
+var paragraph1 = document.getElementById('myP');
+var paragraph2 = paragraph1.cloneNode(true);
+
+// Et attention, l'élément est cloné, mais pas « inséré » tant que l'on n'a pas appelé appendChild() :
+paragraph1.parentNode.appendChild(paragraph2);
+*/
+
+/*
+// Fonction insertBefore pour insérer un élémemnt avant une autre élément référence
+var paragraph = document.querySelector('p');
+var emphasis = document.createElement('em'),
+  emphasisText = document.createTextNode(' en emphase légère ');
+
+emphasis.appendChild(emphasisText);
+
+paragraph.insertBefore(emphasis, paragraph.lastChild);
+*/
+
+/*
+// Fonction pour insérer un element après un auter. Equivalent à insertBefore(newElement, beforeElement)
+function insertAfter(newElement, afterElement) {
+  var parent = afterElement.parentNode;
+
+  if (parent.lastChild === afterElement) { // Si le dernier élément est le même que l'élément après lequel on veut insérer, il suffit de faire appendChild()
+    parent.appendChild(newElement);
+  } else { // Dans le cas contraire, on fait un insertBefore() sur l'élément suivant
+    parent.insertBefore(newElement, afterElement.nextSibling);
+  }
+}
+*/
+
+/*
+Insersion de contenu dans une page d'après un tableau
+var list = ['Langages basés sur ECMAScript :',
+  'JavaScript', 'JScript', 'ActionScript', 'EX4'
+];
+var listLength = list.length;
+
+var divTP2 = document.createElement('div');
+paragraph = document.createElement('p');
+paragraph.appendChild(document.createTextNode(list[0]));
+uList = document.createElement('ul');
+
+divTP2.id = 'divTP2';
+
+console.log('listLength :', listLength);
+
+document.body.appendChild(divTP2);
+divTP2.appendChild(paragraph);
+divTP2.appendChild(uList);
+
+
+for (var i = 1 ; i < listLength ; i++) {
+  var listElement = document.createElement('li');
+  var textElement = document.createTextNode(list[i]);
+  uList.appendChild(listElement).appendChild(textElement);
+
+  }
+
+  */
+
+  // Supprimer tout le contenu d'une div portant le nom 'output'
+  /*
+  var mainDiv = document.getElementById('output');
+  var child = mainDiv.firstChild;
+
+  while (child) {
+    mainDiv.removeChild(child);
+    child = mainDiv.firstChild;
+  }
+  */
+
+  // Fonction de création d'élément
+/*
+  function createSimpleNode(name, options, text) {
+    var node = document.createElement(name); // On crée l'élément 
+
+    for (var o in options) {
+      // On boucle sur les attributs 
+      node.setAttribute(o, options[o]);
+    }
+
+    if (text) {
+      // Si du texte est défini, on l'insère 
+      node.innerHTML = text;
+    }
+
+    return node; // Et on retourne l'élément créé 
+  }
+  */
