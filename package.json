@@ -1,0 +1,32 @@
+{
+  "name": "testhtmlcssjs",
+  "version": "1.0.0",
+  "description": "Playground",
+  "main": "index.js",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "mongodb": "file:mongodb"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edouardmisset/testHTMLCSSJS.git"
+  },
+  "keywords": [
+    "test",
+    "JS",
+    "NodeJS",
+    "MongoDB",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Edouard Misset",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edouardmisset/testHTMLCSSJS/issues"
+  },
+  "homepage": "https://github.com/edouardmisset/testHTMLCSSJS#readme"
+}
