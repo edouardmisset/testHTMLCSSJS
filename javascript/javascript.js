@@ -847,14 +847,26 @@ var myChart = new Chart(ctx, {
 
 );
 */
-var numberOfRoutesPerGrades = [52, 28, 24, 15, 11, 6, 8, 2];
 
-var grades = ["7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+"];
+var aBunchOfAscents = {
+  '7a' : 52,
+  '7a+': 28,
+  "7b" : 24,
+  "7b+" : 15,
+  "7c": 11,
+  "7c+": 6,
+  "8a": 8,
+  "8a+": 2
+} 
 
-var xAxisGrades = {
-  type: 'category',
-  labels: ["7a", "7a+", "7b", "7b+", "7c", "7c+", "8a", "8a+"]
-}
+var numberOfRoutesPerGrades = Object.values(aBunchOfAscents);
+
+var grades = Object.keys(aBunchOfAscents);
+
+// var xAxisGrades = {
+//   type: 'category',
+//   labels: grades
+// }
 
 var ctx2 = document.getElementById("myChart2");
 var myChart2 = new Chart(ctx2, {
@@ -876,25 +888,26 @@ var myChart2 = new Chart(ctx2, {
           fontColor: "white",
           // fontSize: 14
         },
-        // gridLines: {
-        //   display:true,
-        //   color: "#white",
-        //   // lineWidth: 2,
-        //   zeroLineColor: "#white",
-        //   // zeroLineWidth: 2
-        // },
+        gridLines: {
+          display:true,
+          color: "white",
+          lineWidth: .5,
+          zeroLineColor: "white",
+          zeroLineWidth: .5
+        },
         // stacked: true
       }],
       xAxes: [{
         ticks: {
+          // color: "white",
           fontColor: "white",
           // fontSize: 14
         },
-        // gridLines: {
+        gridLines: {
         //   display:true,
-        //   color: "transparent",
+          color: "transparent",
         //   // lineWidth: 2
-        // }
+        }
       }]
     },
     title: {
