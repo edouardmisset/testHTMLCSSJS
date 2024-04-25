@@ -4,7 +4,7 @@
   "description": "Playground",
   "main": "index.js",
   "dependencies": {
-    "formidable": "^1.2.2",
+    "formidable": "^3.2.4",
     "mongodb": "file:mongodb"
   },
   "devDependencies": {},
